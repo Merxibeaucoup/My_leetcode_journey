@@ -1,19 +1,28 @@
 class Solution {
   public String[] sortPeople(String[] names, int[] heights) {
-      
-    String[] result = new String[names.length];
-      
-    TreeMap < Integer, String > map = new TreeMap < > (Collections.reverseOrder());
-
-    for (int i = 0; i < names.length; i++) {
-      map.put(heights[i], names[i]);           // Heights in descending order
+           
+        
+//       new  Array to hold output 
+        String [] result = new String[names.length];
+        
+        //use a treemap , its sorted based on keys 
+        //reverse the order of sort -> descending order
+        TreeMap <Integer, String> tm = new TreeMap<>(Collections.reverseOrder());
+        
+        
+        //put height and name pairs in the map
+        for(int i =0; i<names.length; i++){
+            tm.put(heights[i], names[i]);
+}
+        
+        //initialize index for output array , start at [0]
+        int i =0;
+        //get each key from set 
+        for(int key : tm.keySet()){
+            //retrieve value by key and push it in the output array 
+            result[i++]= tm.get(key);
+}
+        return result;
+        
     }
-
-    int i = 0;
-    for (int h: map.keySet()) {
-      result[i++] = map.get(h);               // Iterate TreeMap
-    }
-
-    return result;
-  }
 }
