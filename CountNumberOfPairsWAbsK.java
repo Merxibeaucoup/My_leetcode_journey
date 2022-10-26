@@ -2,6 +2,8 @@
 
 // brute force solution
 
+// Big O(N^2)
+
 class Solution {
     public int countKDifference(int[] nums, int k) {
         
