@@ -21,7 +21,11 @@ class Solution {
         
         int ans [] = new int [nums.length]; 
         
+        
+        // run only n times 
         for(int i = 0; i< n; i++){
+         
+            //perform 2 actions ... making it 2*n or nums.length
             
         ans[2*i]= nums[i];  // for even index 
         ans[2*i+1] = nums[n +i];   // for odd index
