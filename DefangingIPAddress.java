@@ -11,7 +11,7 @@ Input: address = "1.1.1.1"
 Output: "1[.]1[.]1[.]1"
 */
 
-
+// Method 1 using sb and if-else
 class Solution {
     public String defangIPaddr(String address) {
 
@@ -29,5 +29,14 @@ class Solution {
 
         return sb.toString();
         
+    }
+}
+
+// Methode 2 using replace method
+class Solution {
+    public String defangIPaddr(String address) {
+
+        return address.replace(".","[.]");
+              
     }
 }
